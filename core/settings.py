@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-9oa0#g1nax6qt&d*r3y1jg35jw4ciiq%#34lsn05fmm4#u9jaa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://airgoworld-uruy.onrender.com', 'airgoworld-uruy.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['https://airgoworld-uruy.onrender.com', 'airgoworld-uruy.onrender.com', 'localhost', 'airgoworld.net']
 AUTH_USER_MODEL = "user.CustomUser"
 
 REST_FRAMEWORK = {
