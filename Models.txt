@@ -1,0 +1,118 @@
+
+User
+    status
+    first_name
+    last_name
+    email 
+    phone 
+    user_type
+    currency
+    balance 
+    role 
+    address
+
+Address
+    country
+    state
+    city
+    postal_code
+    address_1
+    address_2
+
+Languages
+    status
+    flag
+    language_code
+    country
+    active
+    type
+
+Country 
+    name
+    iso
+    iso3
+    num_code
+    phone_code
+    country_status
+
+Blog
+    page_name
+    slug
+    category_name
+    date
+    image
+    content
+
+Newsletter 
+    name
+    email
+    created_at
+
+Bookings
+    booking_id
+    booking_date
+    status
+    payment_status
+    total
+    check_in
+    check_out
+    listing
+
+Transaction
+    description 
+    user_id
+    trx_id
+    type 
+    date
+    amount 
+    payment_gateway
+    currency
+
+Flight
+    status 
+    user_id
+    airline 
+    origin 
+    destination
+    adult_ticket_price 
+    child_ticket_price 
+    infant_ticket_price 
+    type
+
+Airport
+    name
+    code
+    city
+    country
+    status
+
+Airlines
+    status
+    iata
+    name
+    country
+
+Tours 
+    status
+    featured 
+    img 
+    name 
+    user_id
+    location 
+    rating
+
+Cars 
+    status
+    featured 
+    img 
+    name 
+    user_id
+    location 
+    rating
+
+Currency 
+    name 
+    abbreviation
+
+    
+

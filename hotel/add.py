@@ -1,0 +1,88 @@
+from .models import Hotel  # Replace 'yourapp' with your actual app name
+
+def create_hotels():
+    hotel_data = [
+        {
+            "name": "Grand Plaza Hotel",
+            "rating": 4.5,
+            "price_per_night": 150.00,
+            "parking": True,
+            "images": ["https://i.pinimg.com/736x/b6/aa/91/b6aa915a8af1139561f0b9ec24a2e5af.jpg"],
+            "restaurant": True,
+            "available": True,
+            "wifi": True,
+            "casino": False,
+            "active": True,
+            "address": "123 Grand Plaza St, Downtown",
+            "country": "USA",
+            "pool": True,
+            "spa": True,
+            "gym": True,
+            "bar": True,
+            "state": "California",
+            "description": "A luxurious hotel with all the amenities you need for a relaxing stay."
+        },
+        {
+            "name": "Seaside Resort",
+            "rating": 4.2,
+            "price_per_night": 200.00,
+            "parking": True,
+            "images": ["https://i.pinimg.com/736x/df/c4/bc/dfc4bc55ddc839ff932539e3d7007ade.jpg"],
+            "restaurant": True,
+            "available": False,
+            "wifi": True,
+            "casino": True,
+            "active": True,
+            "address": "456 Ocean Blvd, Seaside",
+            "country": "USA",
+            "pool": True,
+            "spa": False,
+            "gym": False,
+            "bar": True,
+            "state": "Florida",
+            "description": "Enjoy the beach and entertainment at our seaside resort."
+        },
+        {
+            "name": "Mountain Retreat",
+            "rating": 4.8,
+            "price_per_night": 250.00,
+            "parking": True,
+            "images": ["https://i.pinimg.com/736x/80/0e/a6/800ea631af35a19dd878af02c9167e01.jpg"],
+            "restaurant": False,
+            "available": True,
+            "wifi": True,
+            "casino": False,
+            "active": True,
+            "address": "789 Mountain Rd, Highlands",
+            "country": "Canada",
+            "pool": True,
+            "spa": True,
+            "gym": True,
+            "bar": False,
+            "state": "Alberta",
+            "description": "A peaceful mountain retreat for relaxation and adventure."
+        },
+        {
+            "name": "Cityview Suites",
+            "rating": 3.9,
+            "price_per_night": 130.00,
+            "parking": False,
+            "images": ["https://i.pinimg.com/736x/84/b0/15/84b015ef83882bf59ce71ac2f060c1c7.jpg"],
+            "restaurant": True,
+            "available": True,
+            "wifi": True,
+            "casino": False,
+            "active": True,
+            "address": "101 Cityview Ave, Midtown",
+            "country": "USA",
+            "pool": False,
+            "spa": False,
+            "gym": False,
+            "bar": True,
+            "state": "New York",
+            "description": "Convenient suites for travelers looking for comfort in the heart of the city."
+        },
+    ]
+    for hotel in hotel_data:
+        Hotel.objects.create(**hotel)
+
