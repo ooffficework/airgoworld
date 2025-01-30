@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import dj_database_url
 import os
+from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +30,6 @@ SECRET_KEY = "django-insecure-9oa0#g1nax6qt&d*r3y1jg35jw4ciiq%#34lsn05fmm4#u9jaa
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://airgoworld-uruy.onrender.com', 'airgoworld-uruy.onrender.com', 'localhost']
-# ALLOWED_HOSTS = [ 'airgoworld-wrqj.onrender.com', 'https://airgoworld-wrqj.onrender.com/admin']
 AUTH_USER_MODEL = "user.CustomUser"
 
 REST_FRAMEWORK = {
@@ -196,7 +197,6 @@ REST_FRAMEWORK = {
     ),
 }
 
-from datetime import timedelta
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=360),
