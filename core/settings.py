@@ -118,9 +118,27 @@ WSGI_APPLICATION = "core.wsgi.application"
 #     )
 # }
 
+# DATABASES = {
+#     "default": dj_database_url.config(default=os.environ.get("DATABASE_URL"))
+# }
+
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+# }
+
 DATABASES = {
-    "default": dj_database_url.config(default=os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'airgoworld',  # Your database name
+        'USER': 'airgoworld',  # Your PostgreSQL user
+        'PASSWORD': 'LEGITphones007*',  # Your PostgreSQL password
+        'HOST': 'localhost',
+        'PORT': '5432',  # Default PostgreSQL port
+    }
 }
+
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
