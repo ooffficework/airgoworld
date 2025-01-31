@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     "cabin"
 ]
 
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -126,17 +127,28 @@ WSGI_APPLICATION = "core.wsgi.application"
 #     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 # }
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'airgoworld',  # Your database name
+#         'USER': 'airgoworld',  # Your PostgreSQL user
+#         'PASSWORD': 'EuropaLeague',  # Your PostgreSQL password
+#         'HOST': 'localhost',
+#         'PORT': '5432',  # Default PostgreSQL port
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'airgoworld',  # Your database name
-        'USER': 'airgoworld',  # Your PostgreSQL user
-        'PASSWORD': 'LEGITphones007*',  # Your PostgreSQL password
+        'NAME': 'database',  # Replace with your DB name
+        'USER': 'arigoworld2',  # Replace with your DB user
+        'PASSWORD': 'LEGITphones007*',  # Replace with your DB password
         'HOST': 'localhost',
-        'PORT': '5432',  # Default PostgreSQL port
+        'PORT': '5432',
     }
 }
-
 
 
 # DATABASES = {
@@ -196,8 +208,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
