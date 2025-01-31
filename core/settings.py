@@ -38,16 +38,7 @@ DEBUG = True
         # 'HOST': '2a02:4780:2d:beef::1',  # Use the IP address if PostgreSQL is hosted elsewhere
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'airgoworld_database',  # Replace with your database name
-        'USER': 'airgoworld_user',  # Replace with your username
-        'PASSWORD': 'LEGITphones007*',  # Replace with your password
-        'HOST': 'localhost',  # Use the IP address if PostgreSQL is hosted elsewhere
-        'PORT': '5432',  # Default port for PostgreSQL
-    }
-}
+
 
 
 ALLOWED_HOSTS = [
@@ -143,51 +134,17 @@ WSGI_APPLICATION = "core.wsgi.application"
 #         default=os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
 #     )
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'airgoworld_database',  # Replace with your database name
+        'USER': 'airgoworld_user',  # Replace with your username
+        'PASSWORD': 'LEGITphones007*',  # Replace with your password
+        'HOST': 'localhost',  # Use the IP address if PostgreSQL is hosted elsewhere
+        'PORT': '5432',  # Default port for PostgreSQL
+    }
+}
 
-# DATABASES = {
-#     "default": dj_database_url.config(default=os.environ.get("DATABASE_URL"))
-# }
-
-# DATABASES = {
-#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-# }
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'airgoworld',  # Your database name
-#         'USER': 'airgoworld',  # Your PostgreSQL user
-#         'PASSWORD': 'EuropaLeague',  # Your PostgreSQL password
-#         'HOST': 'localhost',
-#         'PORT': '5432',  # Default PostgreSQL port
-#     }
-# }
-
-
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Or just 'db.sqlite3'
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',  # Replace with your actual database name
-#         'USER': 'postgres',  # Replace with your actual username
-#         'PASSWORD': 'West8015',  # Replace with your actual password
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#         'OPTIONS': {
-#             'connect_timeout': 10,
-#             'sslmode': 'prefer',  # You can adjust this if needed
-#         }
-#     }
-# }
 
 
 # Password validation
