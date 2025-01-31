@@ -30,10 +30,9 @@ SECRET_KEY = "django-insecure-9oa0#g1nax6qt&d*r3y1jg35jw4ciiq%#34lsn05fmm4#u9jaa
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://airgoworld-uruy.onrender.com",
     "46.202.178.135",
-    "airgoworld-uruy.onrender.com",
     "localhost",
+    "http://46.202.178.135:8000"
     "airgoworld.net",
 ]
 AUTH_USER_MODEL = "user.CustomUser"
