@@ -29,12 +29,18 @@ SECRET_KEY = "django-insecure-9oa0#g1nax6qt&d*r3y1jg35jw4ciiq%#34lsn05fmm4#u9jaa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://airgoworld-uruy.onrender.com', 'airgoworld-uruy.onrender.com', 'localhost', 'airgoworld.net']
+ALLOWED_HOSTS = [
+    "https://airgoworld-uruy.onrender.com",
+    "46.202.178.135",
+    "airgoworld-uruy.onrender.com",
+    "localhost",
+    "airgoworld.net",
+]
 AUTH_USER_MODEL = "user.CustomUser"
 
 REST_FRAMEWORK = {
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
+    "DEFAULT_PARSER_CLASSES": [
+        "rest_framework.parsers.JSONParser",
     ]
 }
 
@@ -49,7 +55,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    'rest_framework_simplejwt.token_blacklist',
+    "rest_framework_simplejwt.token_blacklist",
     "blog",
     "user",
     "airline",
@@ -65,7 +71,7 @@ INSTALLED_APPS = [
     "hotel_booking",
     "bank_infos",
     "corsheaders",
-    "cabin"
+    "cabin",
 ]
 
 
@@ -78,9 +84,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'corsheaders.middleware.CorsMiddleware',  
-    'django.middleware.common.CommonMiddleware',
-    
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 RESEND_API_KEY = "re_fvtLfusD_8ymJRqFcrnfjNdTsPGtMvqzA"
@@ -140,13 +145,13 @@ WSGI_APPLICATION = "core.wsgi.application"
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'database',  # Replace with your DB name
-        'USER': 'arigoworld2',  # Replace with your DB user
-        'PASSWORD': 'LEGITphones007*',  # Replace with your DB password
-        'HOST': 'localhost',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "database",  # Replace with your DB name
+        "USER": "arigoworld2",  # Replace with your DB user
+        "PASSWORD": "LEGITphones007*",  # Replace with your DB password
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -208,10 +213,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -224,18 +229,18 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',  # Ensure this is included
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.AllowAny",  # Ensure this is included
     ),
 }
 
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=360),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
-    'ROTATE_REFRESH_TOKENS': True,
-    'BLACKLIST_AFTER_ROTATION': True,
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=360),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": True,
 }
