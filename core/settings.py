@@ -29,6 +29,27 @@ SECRET_KEY = "django-insecure-9oa0#g1nax6qt&d*r3y1jg35jw4ciiq%#34lsn05fmm4#u9jaa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# CREATE DATABASE airgoworld_database;
+# CREATE USER airgoworld_user WITH PASSWORD 'LEGITphones007*';
+# ALTER ROLE airgoworld_user SET client_encoding TO 'utf8';
+# ALTER ROLE airgoworld_user SET default_transaction_isolation TO 'read committed';
+# ALTER ROLE airgoworld_user SET timezone TO 'UTC';
+# GRANT ALL PRIVILEGES ON DATABASE airgoworld_database TO airgoworld_user;
+        # 'HOST': '2a02:4780:2d:beef::1',  # Use the IP address if PostgreSQL is hosted elsewhere
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'airgoworld_database',  # Replace with your database name
+        'USER': 'airgoworld_user',  # Replace with your username
+        'PASSWORD': 'LEGITphones007*',  # Replace with your password
+        'HOST': 'localhost',  # Use the IP address if PostgreSQL is hosted elsewhere
+        'PORT': '5432',  # Default port for PostgreSQL
+    }
+}
+
+
 ALLOWED_HOSTS = [
     "46.202.178.135",
     "localhost",
